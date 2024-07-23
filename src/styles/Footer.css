@@ -1,0 +1,26 @@
+.Footer {
+    display: flex;
+    color: white;
+    background-color: black;
+    font-family: 'Montserrat';
+    flex-direction: column;
+    align-items: center;
+    height: 209px;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.Footer img {
+    height: 40px;
+    width: 122px;
+    margin-bottom: 28px;
+    margin-top: 66px;
+}
+
+#footerText {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 29px;
+    margin-top: 0px;
+}
