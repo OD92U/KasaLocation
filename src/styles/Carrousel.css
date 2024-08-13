@@ -1,0 +1,25 @@
+.carrousel {
+    width: 1240px;
+    height: 415px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.carrouselPrev {
+    background: rgba(0,0,0,0.0);
+    border: 0px;
+    color: white;
+    font-size: 79px;
+}
+
+.carrouselNext {
+    background: rgba(0,0,0,0.0);
+    border: 0px;
+    color: white;
+    font-size: 79px;
+}
