@@ -24,3 +24,11 @@
     margin-bottom: 29px;
     margin-top: 0px;
 }
+
+@media (max-width: 767.98px) {
+    .Footer {
+        font-size: 12px;
+
+    }
+}
+    

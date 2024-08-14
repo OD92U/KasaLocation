@@ -14,15 +14,44 @@ const Carrousel = ({ images }) => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
+  const createNext = () => {
+    if (images.length===1) {
+      return
+    }
+    else {
+      return (
+      <button onClick={nextSlide} className="carrouselNext">
+      &gt;
+      </button>)
+    }
+  }
+  const createPrev = () => {
+    if (images.length===1) {
+      return
+    }
+    else {
+      return (
+      <button onClick={prevSlide} className="carrouselPrev">
+      &lt;
+      </button>)
+    }
+  }
+  const createCounter = () => {
+    if (images.length===1) {
+      return
+    }
+    else {
+      return (
+        <div className='imageCounter'>{activeIndex+1}/{images.length}</div>
+      )
+    }
+  }
+
   return (
     <div style={{backgroundImage:`url(${images[activeIndex]})`}} className="carrousel">
-      <button onClick={prevSlide} className="carrouselPrev">
-        &lt;
-      </button>
-      
-      <button onClick={nextSlide} className="carrouselNext">
-        &gt;
-      </button>
+      {createPrev()}
+      {createCounter()}
+      {createNext()}
     </div>
   );
 };

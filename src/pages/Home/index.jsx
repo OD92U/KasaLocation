@@ -13,7 +13,7 @@ function Home() {
         Chez vous, partout et ailleurs</div>
       <div className='Gallery'>
         {listeLogements.map((logement) => (
-          <Link to={"/FicheLogement/" + logement.id}>
+          <Link key={"link" + logement.id} to={"/FicheLogement/" + logement.id}>
             <Card 
           key={logement.id}
           title={logement.title}
