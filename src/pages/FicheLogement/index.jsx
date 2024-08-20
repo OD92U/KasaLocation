@@ -10,11 +10,17 @@ import ratingMinus from '../../assets/ratingMinus.png'
 function FicheLogement() {
   const listeLogements = logements;
   const {idCards} = useParams();
+  let test1 = false;
 
  for (let i = 0; i < listeLogements.length; i++) {
   if (listeLogements[i].id === idCards) {
     var data = listeLogements[i];
+    test1 = true;
   }  
+}
+console.log(test1);
+if (test1===false) {
+ window.location.href="/Error";
 }
 
 const ratings = parseInt(data.rating);
