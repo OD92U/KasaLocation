@@ -10,16 +10,16 @@ import ratingMinus from '../../assets/ratingMinus.png'
 function FicheLogement() {
   const listeLogements = logements;
   const {idCards} = useParams();
-  let test1 = false;
+  let exists = false;
 
  for (let i = 0; i < listeLogements.length; i++) {
   if (listeLogements[i].id === idCards) {
     var data = listeLogements[i];
-    test1 = true;
+    exists = true;
   }  
 }
-console.log(test1);
-if (test1===false) {
+
+if (exists===false) {
  window.location.href="/Error";
 }
 
