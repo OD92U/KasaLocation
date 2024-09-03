@@ -1,7 +1,9 @@
+@use "../../public/index.scss" as i;
+
 .TitleCard {
     margin-left: 20px;
     margin-bottom: 20px;
-    font-family: 'Montserrat';
+    font-family: i.$main-font;
     font-weight: 700;
     font-size: 18px;
     color: white;
@@ -14,10 +16,8 @@
     height: 340px;
     background-size: cover;
     border-radius: 10px;
-}
 
-@media (max-width: 767.98px) {
-    .Card {
+    @media (max-width: 767.98px) {
         width: 335px;
         height: 255px;
     }

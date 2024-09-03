@@ -1,4 +1,4 @@
-import '../../styles/Home.css'
+import '../../styles/Home.scss'
 import logements from '../../data/logements.json'
 import Card from '../../components/Card'
 import { Link } from 'react-router-dom';

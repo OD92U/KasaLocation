@@ -1,0 +1,55 @@
+@use "../../public/index.scss" as i;
+
+.mainError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 139px;
+    margin-bottom: 139px;
+
+    @media (max-width: 767.98px) {
+        max-width: 768px;
+        width: calc(100% - 40px);
+        gap: 113px;
+        margin-bottom: 113px;
+        margin-top: 113px;
+    }
+}
+
+.bigError {
+    font-family: i.$main-font;
+    font-weight: 700;
+    font-size: 288px;
+    color: i.$main-color;
+
+    @media (max-width: 767.98px) {
+        font-size: 96px;
+    }
+}
+
+.oups {
+    font-family: i.$main-font;
+    font-weight: 500;
+    font-size: 36px;
+    color: i.$main-color;
+
+    @media (max-width: 767.98px) {
+        font-size: 18px;
+        max-width: calc(100% - 75px);
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.versAccueil {
+    font-family: i.$main-font;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: underline;
+
+    @media (max-width: 767.98px) {
+        font-size: 14px;
+    }
+}

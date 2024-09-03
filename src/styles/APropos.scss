@@ -1,6 +1,14 @@
+@use "../../public/index.scss" as i;
+
 .APropos {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: i.$main-margin;
+    margin-right: i.$main-margin;
+
+    @media (max-width: 767.98px) {
+        max-width: 768px;
+        width: calc(100% - 40px);
+        margin: 0px;
+    }
 }
 
 .BannerImg {
@@ -15,28 +23,20 @@
     background-position: center center;
     mix-blend-mode: darken;
     margin-bottom: 38px;
-}
 
-.MainAPropos {
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 767.98px) {
-    .APropos {
-        max-width: 768px;
-        width: calc(100% - 40px);
-        margin: 0px;
-    }
-
-    .BannerImg {
+    @media (max-width: 767.98px) {
         height: 111px;
         border-radius: 10px;
     }
+}
 
-    .MainAPropos {
+.MainAPropos {
+    margin-left: i.$main-margin;
+    margin-right: i.$main-margin;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767.98px) {
         margin: 0px;
     }
 }

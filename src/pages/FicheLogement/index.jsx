@@ -2,7 +2,7 @@ import logements from '../../data/logements.json'
 import Carrousel from '../../components/Carrousel'
 import Collapse from '../../components/Collapse'
 import { useParams } from 'react-router-dom';
-import '../../styles/FicheLogement.css';
+import '../../styles/FicheLogement.scss';
 import ratingPlus from '../../assets/ratingPlus.png'
 import ratingMinus from '../../assets/ratingMinus.png'
 

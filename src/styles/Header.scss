@@ -1,0 +1,47 @@
+@use "../../public/index.scss" as i;
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 45px i.$main-margin 50px i.$main-margin;
+    width: 1240px;
+
+    @media (max-width: 767.98px) {
+        max-width: 768px;
+        width: 335px;
+        margin: 20px 20px 27px 20px;
+    }
+
+    img {
+        @media (max-width: 767.98px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+}
+
+nav {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 57px;
+    align-items: center;
+
+    @media (max-width: 767.98px) {
+        gap: 26px;
+    }
+
+    a {
+        color:black;
+        font-family: i.$main-font;
+        font-weight: 500;
+        font-size: 24px;
+    
+        @media (max-width: 767.98px) {
+            font-size: 12px;
+        }
+    }
+}
+
