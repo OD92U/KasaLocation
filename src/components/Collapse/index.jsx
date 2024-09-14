@@ -27,8 +27,8 @@ function Collapse({ title, body} ) {
     }
 
     function List() {
-      const listItems = trueBody.map(item =>
-        <li>{item}</li>
+      const listItems = trueBody.map((item, i) =>
+        <li key={i}>{item}</li>
       );
       return <ul>{listItems}</ul>;
     }

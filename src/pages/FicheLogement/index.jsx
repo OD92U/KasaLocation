@@ -28,11 +28,11 @@ function CreateRatings(nb) {
   const items = [];
 
   for (let i = 0; i < nb; i++) {
-    items.push(<img src={ratingPlus} alt="star"/>);
+    items.push(<img src={ratingPlus} alt="star" key={'ratingPlus' + i}/>);
   }
 
   for (let i = 0; i < 5-nb; i++) {
-    items.push(<img src={ratingMinus} alt="star"/>);
+    items.push(<img src={ratingMinus} alt="star" key={'ratingMinus' + i}/>);
   }
   return <>{items}</>;
 }
@@ -54,8 +54,8 @@ function CreateRatings(nb) {
               <p>{data.location}</p>
             </div>
             <div className='tagsLogements'>
-              {data.tags.map((tag) => (
-                <div className='Tag'>{tag}</div> ))}
+              {data.tags.map((tag, index) => (
+                <div className='Tag' key={index}>{tag}</div> ))}
             </div>
             
           </div>
@@ -72,12 +72,12 @@ function CreateRatings(nb) {
           </div>
           <div className='collapsesLogements'>
             <Collapse 
-            key={'Description'}
+            key={'Description-' + idCards}
             title={'Description'}
             body={data.description}
             />
             <Collapse
-            key={'Equipements'}
+            key={'Equipements-' + idCards}
             title={'Equipements'}
             body={data.equipments}
             /> 
