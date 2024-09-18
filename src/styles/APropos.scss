@@ -3,6 +3,9 @@
 .APropos {
     margin-left: i.$main-margin;
     margin-right: i.$main-margin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (max-width: 767.98px) {
         max-width: 768px;
@@ -31,12 +34,11 @@
 }
 
 .MainAPropos {
-    margin-left: i.$main-margin;
-    margin-right: i.$main-margin;
+    width: 84%;
     display: flex;
     flex-direction: column;
 
     @media (max-width: 767.98px) {
-        margin: 0px;
+        width: 100%;
     }
 }

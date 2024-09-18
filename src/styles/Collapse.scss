@@ -1,15 +1,22 @@
 @use "../../public/index.scss" as i;
 
 .CollapseBody {
-    transition-property: height;
-    transition-duration: 200ms;
+    transition-property: max-height;
+    transition-duration: 400ms;
     overflow: hidden;
+    height: auto;
     font-family: i.$main-font;
     font-weight: 500;
     font-size: 18px;
     background-color: #F6F6F6;
     margin-bottom: 30px;
     border-radius: 5px;
+}
+
+.faChevronUp {
+    transition-property: rotate;
+    transition-duration: 400ms;
+    overflow: hidden;
 }
 
 .CollapseButton {

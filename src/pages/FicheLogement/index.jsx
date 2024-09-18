@@ -71,16 +71,16 @@ function CreateRatings(nb) {
           </div>
           </div>
           <div className='collapsesLogements'>
-            <Collapse 
+            <div className='collapseDiv'><Collapse 
             key={'Description-' + idCards}
             title={'Description'}
             body={data.description}
-            />
-            <Collapse
+            /></div>
+            <div className='collapseDiv'><Collapse
             key={'Equipements-' + idCards}
             title={'Equipements'}
             body={data.equipments}
-            /> 
+            /> </div>
           </div>
         </div>
         

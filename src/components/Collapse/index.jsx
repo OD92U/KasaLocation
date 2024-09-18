@@ -6,19 +6,10 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Collapse({ title, body} ) {
     const [isExpanded, setIsExpanded] = useState(false);
-    const [rotate, setRotation] = useState(0);
     const toggleIsExpanded = useCallback(() => {
       setIsExpanded((isExpanded) => !isExpanded);
     }
     , []);
-    const rotateIcon = () => {
-      if (rotate===0) {
-        setRotation((rotate) => (rotate=180))
-      }
-      if (rotate===180) {
-        setRotation((rotate) => (rotate=0))
-      }
-    };
 
     var trueBody = body
 
@@ -36,10 +27,10 @@ function Collapse({ title, body} ) {
     return (
       <>
         <div className='totalCollapse'>
-        <button className='CollapseButton' onClick={() => {rotateIcon(); toggleIsExpanded()}}>{title}<FontAwesomeIcon icon={faChevronUp} rotation={rotate}/></button>
+        <button className='CollapseButton' onClick={() => {toggleIsExpanded()}}>{title}<FontAwesomeIcon icon={faChevronUp} className='faChevronUp' style={{ rotate: isExpanded ? "-180deg" : "0deg" }} /></button>
         <div
           className="CollapseBody"
-          style={{ height: isExpanded ? "auto" : "0px" }}
+          style={{ maxHeight: isExpanded ? "200px" : "0px" }}
         ><div className='collapseList'>{List()}</div>
         </div>
         </div>
